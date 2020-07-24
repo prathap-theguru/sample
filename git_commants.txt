@@ -1,0 +1,15 @@
+…or create a new repository on the command line
+echo "# cicdsampleapp" >> README.md
+git init
+git remote add origin https://github.com/prathap-theguru/cicdsampleapp.git
+git add README.md
+git commit -m "first commit"
+
+git push -u origin master
+                
+…or push an existing repository from the command line
+	
+git push -u origin master
+
+https://ncona.com/2020/04/introduction-to-aws-codebuild/
+

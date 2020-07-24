@@ -6,14 +6,23 @@ phases:
       java: corretto11
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase...
+      - echo Entering pre_build phase...
+      - echo Test started on `date`
+      #- mvn clean compile test
   build:
     commands:
+      - echo Entering build phase...
       - echo Build started on `date`
-      - mvn install
+      #- mvn war
+      #- mvn install
+      - mvn prepare-package war:exploded
   post_build:
     commands:
+      - echo Entering post_build phase...    
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/messageUtil-1.0.jar
+    #- target/sample-1.0.jar
+    #- target/sample-1.0.war
+    - '**/*'
+ 
